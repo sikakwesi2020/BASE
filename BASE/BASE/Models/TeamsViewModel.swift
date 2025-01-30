@@ -37,6 +37,8 @@ class TeamsViewModel: ObservableObject {
     @Published var teamFavorites: [(teamId: String, numFavorites: Int)] = []
     private let url = URL(string: "https://storage.googleapis.com/gcp-mlb-hackathon-2025/datasets/mlb-fan-content-interaction-data/2025-mlb-fan-favs-follows.json")!
 
+    @Published var geminiApiKey: String = ""
+    @Published var YtApi: String = ""
    
     
     

@@ -202,7 +202,7 @@ struct Home: View {
                                     let scores:[Double] = viewModel.getTeamScoresData(teamID: FavTeam.id)
                                     let downsampledScores = viewModel.downsample(data: scores, targetCount: 20)
                                     let rank = viewModel.calculateOverallPerformancePercentage(scores: scores)
-                                    
+                                     
                                     LineChartView(data: downsampledScores, title: FavTeam.teamName, legend: "Scores", style: Styles.lineChartStyleOne, rateValue: rank)
                                 }
                             }

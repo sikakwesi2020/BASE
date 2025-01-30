@@ -2,20 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>GIDClientID</key>
-    <string>224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431.apps.googleusercontent.com</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>com.googleusercontent.apps.224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431</string>
-        </array>
-      </dict>
-    </array>
-
-<!--	<key></key>-->
-<!--	<string></string>-->
+	<key>GIDClientID</key>
+	<string>224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSSupportsLiveActivities</key>
 	<true/>
 	<key>NSSupportsLiveActivitiesFrequentUpdates</key>
@@ -31,5 +28,7 @@
 		<key>New item - 2</key>
 		<string></string>
 	</dict>
+	<key>IPAddress</key>
+	<string>192.168.1.154:5000</string>
 </dict>
 </plist>

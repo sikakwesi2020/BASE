@@ -288,6 +288,7 @@ struct ViewFullPlayList: View {
             } else {
                 ProgressView()
                     .onAppear {
+                        helper.apiKey = viewModel.YtApi
                         helper.runAndCompute()
                     }
             }
@@ -304,9 +305,14 @@ struct ViewFullPlayList: View {
       }
     func fetchCaptions(videoID: String) {
 //        let url = "https://us-central1-classcap.cloudfunctions.net/MLBCaptionFetch?video_id=\(videoID)"
-        let url = "http://192.168.1.91:5000/get_captions?video_id=\(videoID)"
+       
 //        http://192.168.1.91:5000/get_captions?
+        
+        let Ip = Bundle.main.object(forInfoDictionaryKey: "IPAddress") as? String ?? ""
+        let url = "http://\(Ip)/get_captions?video_id=\(videoID)"
+        
 
+        print("ip is \(Ip)")
         AF.request(url).responseDecodable(of: TranscriptResponse.self) { response in
             switch response.result {
             case .success(let data):

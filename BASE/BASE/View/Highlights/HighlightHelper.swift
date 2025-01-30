@@ -5,7 +5,7 @@
 //  Created by MAXWELL TAWIAH on 1/14/25.
 //
 
-import Foundation
+import Foundation 
 import Alamofire
 
 class HighlightHelper: ObservableObject {
@@ -18,11 +18,11 @@ class HighlightHelper: ObservableObject {
     @Published var AllStarResponses: [YouTubePlaylistResponse] = []
     @Published var activePlayList: YouTubePlaylistResponse?
     
+    @Published var apiKey: String = ""
+    
     
 //   Client ID= 224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431.apps.googleusercontent.com
     
-    let apiKey = "AIzaSyA2eOnBMVpGLu0vZtYYZNliVIMdPqIf5ys"
-    let temPToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRkMTI1ZDVmNDYyZmJjNjAxNGFlZGFiODFkZGYzYmNlZGFiNzA4NDciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMjQzMjYxMTI0ODgtcTB0dTR1aWVobGY1dnZrZ3F2dnE3aTJmcnRkM2o0MzEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMjQzMjYxMTI0ODgtcTB0dTR1aWVobGY1dnZrZ3F2dnE3aTJmcnRkM2o0MzEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDQ0OTQ0OTg4OTAwNTA3MDY5NTkiLCJlbWFpbCI6InNpa2Frd2VzaTIwMDBAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJvcVdKNms4dVhLZnNZbEJBNXNpZFNnIiwibm9uY2UiOiIwM3dmOFdhOUlaWTd3TndIMGhmWEZ4Rm1GREc5OUNrQmp0ekM2SFkyUW5vIiwibmFtZSI6Ik1BWFdFTEwgVEFXSUFIIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0pGVFVycEd6aWpxMHRvc3c0MENOSVZ1OVJzeDV5ZEV3WjRyekhmSWV0TV9NVG9aa1AtPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1BWFdFTEwiLCJmYW1pbHlfbmFtZSI6IlRBV0lBSCIsImlhdCI6MTczNjk2ODgyOSwiZXhwIjoxNzM2OTcyNDI5fQ.ggM_TFs7KlqzHx4fRrv6OtJrz8eM9hsjQO6jm4wyohi3VSzv9Dy3F74HbBlAIVwGQDl-fo6PBzhI5_lSnNCy_WYrIXkwr_wGteaOtE6Tpq72KR6gnSFHOekhm17PcEqsX4gKZgGjDuzXlFR2ok4esBsYQJu5NCzyRKD8S4w3lSG7GKepLS3WJ5SISXg1WxGfE3qER7BHE0QnTisN9bpRb21x1UGHdz2g1uldrWjv02G71HIBG3Urc5sadVJsfc9A0vKOAPYMk5Z_RRrVFsEOsDfPD6p95w8UCWXh_1ya1wyt1OJpy4B8cb6jYEx2dMVNXIfPKNcndbNoqG9-ODeBsQ"
     
     let allStar:[Playlist] = [
         Playlist(id: "PLL-lmlkrmJamFF2VlPPgQIpEDXRCxV-6Z", name: "2023 MLB All-Star Game"),

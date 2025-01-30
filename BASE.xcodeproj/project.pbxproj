@@ -71,20 +71,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C501F09E2D382252006E5EB0 /* Exceptions for "BASE" folder in "BASETests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = C5AF32012D1B15EB00A07863 /* BASETests */;
-		};
-		C501F09F2D382252006E5EB0 /* Exceptions for "BASE" folder in "BASEUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = C5AF320B2D1B15EB00A07863 /* BASEUITests */;
-		};
 		C501F0A12D38230A006E5EB0 /* Exceptions for "LiveGame" folder in "LiveGameExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -110,7 +96,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
-				"GoogleService-Info.plist",
 				Localizable.xcstrings,
 			);
 			target = C5DE898E2D29EE06008EE3F4 /* LiveGameExtension */;
@@ -122,8 +107,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				C501F0A32D3823A8006E5EB0 /* Exceptions for "BASE" folder in "BASE" target */,
-				C501F09E2D382252006E5EB0 /* Exceptions for "BASE" folder in "BASETests" target */,
-				C501F09F2D382252006E5EB0 /* Exceptions for "BASE" folder in "BASEUITests" target */,
 				C5DE89B52D29EF72008EE3F4 /* Exceptions for "BASE" folder in "LiveGameExtension" target */,
 			);
 			path = BASE;

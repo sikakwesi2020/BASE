@@ -79,10 +79,10 @@ class StandingsHelper:ObservableObject {
             print("Error encoding team records to JSON: \(error)")
             return nil
         }
-    }
+    } 
     
-    func runAnalytics(jsonSummary: String, responseLanguage: String) async -> String? {
-        let model = GenerativeModel(name: "gemini-1.5-flash-latest", apiKey: "AIzaSyDiqxaLN80ps852aSjzZUqjFTX1YZ6g8Wc")
+    func runAnalytics(jsonSummary: String, responseLanguage: String, apiKey: String) async -> String? {
+        let model = GenerativeModel(name: "gemini-1.5-flash-latest", apiKey: apiKey)
         // Build the prompt
             let prompt = """
             Analyze the following JSON data of league standings for the season, generate a detailed markdown report of the league's performance, including key highlights, trends, and a summary of the season. Provide predictions for the next season based on the data. Respond in \(responseLanguage).

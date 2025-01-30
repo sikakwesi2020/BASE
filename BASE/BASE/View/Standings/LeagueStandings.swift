@@ -195,7 +195,7 @@ struct LeagueStandings: View {
                             let langua = LocaleManager.shared.fetchLocale()
                             //print("language is \( langua)")
                             Task {
-                                if let Report = await standing.runAnalytics(jsonSummary: summary ?? "", responseLanguage: "\(langua)" ) {
+                                if let Report = await standing.runAnalytics(jsonSummary: summary ?? "", responseLanguage: "\(langua)", apiKey: viewModel.geminiApiKey ) {
                                     DispatchQueue.main.async {
                                         standing.markdownReport = Report
                                         statusReportSheet.toggle()

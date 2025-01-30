@@ -76,13 +76,24 @@ struct ContentView: View {
             TeamsSelectionView(showCancel: .constant(false))
         })
         .onAppear {
+            if let infoDict = Bundle.main.infoDictionary {
+                print("Info.plist contents: \(infoDict)")
+            }
+            if let apiUrl = Bundle.main.object(forInfoDictionaryKey: "IPAddress") as? String {
+                print("The API URL is: \(apiUrl)")
+            } else {
+                print("API_URL key not found in Info.plist")
+            }
+            
             loadTeams.toggle()
             viewModel.loadSchedules()
             viewModel.fetchTeams()
             viewModel.fetchFavorites()
-            
-           // checkSignInStatus()
-
+            //checkSignInStatus ()
+            ApiHandler().fetchAPIData() { data in
+                viewModel.geminiApiKey = data.gemini
+                viewModel.YtApi = data.yt
+            }
         }
         
         

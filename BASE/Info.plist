@@ -17,5 +17,7 @@
 	</array>
 	<key>GIDClientID</key>
 	<string>224326112488-q0tu4uiehlf5vvkgqvvq7i2frtd3j431.apps.googleusercontent.com</string>
+	<key>IPAddress</key>
+	<string>192.168.1.154:5000</string>
 </dict>
 </plist>

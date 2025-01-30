@@ -10,6 +10,7 @@ import YouTubePlayerKit
 import SDWebImageSwiftUI
 
 struct HighLights: View {
+    @EnvironmentObject var viewModel:TeamsViewModel
     @StateObject var helper = HighlightHelper()
     @State var youTubePlayer: YouTubePlayer = "https://www.youtube.com/watch?v=mgl_JgwAv7w"
     @State private var showPlaylist: Bool = false
@@ -70,6 +71,7 @@ struct HighLights: View {
                 ViewFullPlayList(helper: helper)
             })
             .onAppear {
+                helper.apiKey = viewModel.YtApi
                 helper.runAndCompute()
             }
             
